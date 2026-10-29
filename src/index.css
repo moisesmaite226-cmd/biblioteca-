@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+:root {
+  /* Tema Padrão: Branco Agradável aos Olhos (Conforto Visual & Sem Reflexo) */
+  --papel: #faf8f5;
+  --papel-escuro: #f3efe6;
+  --papel-borda: #e4ded4;
+  --tinta: #1c1712;
+  --tinta-suave: #463d33;
+  --tinta-clara: #7a6f5e;
+  
+  /* Verde Oliva Nobre (Olive Green) */
+  --oliva: #556b2f;
+  --oliva-escuro: #3c4d1f;
+  --oliva-profundo: #2b3815;
+  --oliva-claro: #edf3e4;
+  --oliva-suave: #f2f6ec;
+  --oliva-borda: #c2d2b0;
+  --oliva-acento: #6b843d;
+
+  --terracota: #a8563c;
+  --dourado: #b89155;
+  --dourado-escuro: #8f6f3e;
+  --creme-card: #ffffff;
+  --borda-fina: #e4ded4;
+  --sombra: 0 1px 3px rgba(28,23,18,.05), 0 4px 18px rgba(28,23,18,.04);
+  --sombra-forte: 0 4px 28px rgba(28,23,18,.10);
+  --serif: 'EB Garamond', 'Cinzel', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --sans: 'Plus Jakarta Sans', 'Optima', -apple-system, system-ui, sans-serif;
+}
+
+/* Modo Branco Acolhedor (Olhos Confortáveis, 0 Luz Azul Ofuscante) */
+:root, [data-theme="warm-white"] {
+  --papel: #faf8f5;
+  --papel-escuro: #f3efe6;
+  --papel-borda: #e4ded4;
+  --tinta: #1c1712;
+  --tinta-suave: #463d33;
+  --tinta-clara: #7a6f5e;
+  --creme-card: #ffffff;
+  --borda-fina: #e4ded4;
+}
+
+[data-theme="warm-white"] body {
+  background-color: #faf8f5;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(184,145,85,.022) 40px),
+    radial-gradient(circle at 15% 20%, rgba(184,145,85,.035) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(85,107,47,.05) 0%, transparent 40%);
+}
+
+/* Reinterpretação suave para superfícies brancas amigáveis aos olhos */
+[data-theme="warm-white"] .bg-\[\#fcf8ef\] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="warm-white"] .bg-\[\#f6f1e8\] {
+  background-color: #faf8f5 !important;
+}
+
+[data-theme="warm-white"] .bg-\[\#ede6d6\] {
+  background-color: #f3efe6 !important;
+}
+
+[data-theme="warm-white"] .bg-\[\#ede6d6\]\/40 {
+  background-color: rgba(243, 239, 230, 0.45) !important;
+}
+
+[data-theme="warm-white"] .bg-\[\#ede6d6\]\/60 {
+  background-color: rgba(243, 239, 230, 0.65) !important;
+}
+
+[data-theme="warm-white"] .border-\[\#d4c9b2\] {
+  border-color: #e4ded4 !important;
+}
+
+[data-theme="warm-white"] .border-\[\#d4c9b2\]\/60 {
+  border-color: rgba(228, 222, 212, 0.65) !important;
+}
+
+[data-theme="warm-white"] .hover\:bg-\[\#ede6d6\]:hover {
+  background-color: #eee9df !important;
+}
+
+[data-theme="warm-white"] .hover\:bg-\[\#ede6d6\]\/40:hover {
+  background-color: rgba(238, 233, 223, 0.55) !important;
+}
+
+[data-theme="warm-white"] .hover\:bg-\[\#f6f1e8\]:hover {
+  background-color: #f7f4ed !important;
+}
+
+/* Modo Pergaminho Tradicional Clássico */
+[data-theme="parchment"] {
+  --papel: #f6f1e8;
+  --papel-escuro: #ede6d6;
+  --papel-borda: #ddd3bf;
+  --tinta: #1c1712;
+  --tinta-suave: #4a3f33;
+  --tinta-clara: #877b69;
+  --creme-card: #fcf8ef;
+  --borda-fina: #d4c9b2;
+}
+
+[data-theme="parchment"] body {
+  background-color: #f6f1e8;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(184,145,85,.04) 40px),
+    radial-gradient(circle at 15% 20%, rgba(184,145,85,.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(85,107,47,.07) 0%, transparent 40%);
+}
+
+body {
+  font-family: var(--sans);
+  background-color: var(--papel);
+  color: var(--tinta);
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(184,145,85,.025) 40px),
+    radial-gradient(circle at 15% 20%, rgba(184,145,85,.035) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(85,107,47,.05) 0%, transparent 40%);
+  background-attachment: fixed;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-serif-vintage {
+  font-family: var(--serif);
+}
+
+.font-sans-custom {
+  font-family: var(--sans);
+}
+
+/* Moldura dupla clássica Ex-Libris */
+.moldura-exlibris {
+  position: relative;
+  border: 1px solid var(--borda-fina);
+}
+
+.moldura-exlibris::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--borda-fina);
+  pointer-events: none;
+}
+
+/* Tarja gradiente superior Dourado - Verde Oliva - Dourado */
+.faixa-topo {
+  position: relative;
+}
+
+.faixa-topo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--dourado), var(--oliva), var(--dourado));
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

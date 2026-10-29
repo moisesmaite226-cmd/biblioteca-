@@ -1,0 +1,6 @@
+{
+  "name": "BiblioEscola - Sistema de Biblioteca Escolar",
+  "description": "Sistema completo de Biblioteca Escolar com Painel da Bibliotecária (login PIN 4 dígitos, cadastro expresso, busca automática de capas, controle de estoque), Interface do Aluno com catálogo de mais de 1000 livros, carrosséis de 'Mais Populares' e 'Tesouros Escondidos', gamificação e Pontos de Responsabilidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
